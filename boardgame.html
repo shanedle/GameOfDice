@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS -->
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Title-->
+    <title>Game of Dice - Board Game</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-custom d-flex justify-content-center">
+        <a class="navbar-brand" href="index.html">
+            <img src="./img/logo.svg" width="400" alt="Game of Dice logo">
+        </a>
+    </nav>
+
+    <section class="container">
+
+        <div class="row">
+            <div class="col">
+                <h4 class="h4">Player 1</h2>
+                    <span class="playerName1"></span>
+            </div>
+
+            <div class="col">
+                <h4 class="h4">Player 2</h2>
+                    <span class="playerName2"></span>
+            </div>
+
+            <div class="col">
+                <img src="./img/dice-1.png" alt="Dice" class="dice">
+
+                <button class="btn btn-outline-dark" id="rollDice">Roll Dice</button>
+            </div>
+    </section>
+
+    <!-- Loader from loading.io -->
+
+    <div class="loader">
+        <img src="./img/loading.gif" alt="Loading..." />
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./js/script.js"></script>
+    <script src="./js/boardgame.js"></script>
+</body>
+
+</html>
