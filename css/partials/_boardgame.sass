@@ -1,0 +1,203 @@
+#board
+  span
+    display: inline-block
+    width: 150px
+    height: 100px
+    border: 1px solid $black
+
+  div
+    &:nth-child(odd) span:nth-child(even)
+      background-color: $indigo
+      color: $timberwolf
+
+    &:nth-child(even) span
+      &:nth-child(odd)
+        background-color: $indigo
+        color: $timberwolf
+
+      &:nth-child(even)
+        background-color: $timberwolf
+        color: $indigo
+
+    &:nth-child(odd) span:nth-child(odd)
+      background-color: $timberwolf
+      color: $indigo
+
+#row-1, #row-3, #row-5
+  display: inline-flex
+  flex-direction: row-reverse
+
+.tile
+  font-size: 20px
+
+/* TILE WHITE ARROW RIGHT
+
+#tile-2, #tile-4, #tile-12, #tile-14, #tile-22, #tile-24
+  background-image: url(../img/arrow-right.svg)
+  background-size: cover
+
+/* TILE WHITE ARROW LEFT
+
+#tile-6, #tile-16, #tile-26
+  background-image: url(../img/arrow-left.svg)
+  background-size: cover
+
+/* TILE WHITE ARROW UP
+
+#tile-10, #tile-20
+  background-image: url(../img/arrow-up.svg)
+  background-size: cover
+
+/* TILE BLUE ARROW up
+
+#tile-5
+  background-image: url(../img/arrow-blue-up.svg)
+  background-size: cover
+
+/* TILE BLUE ARROW LEFT
+
+#tile-7, #tile-9, #tile-17, #tile-19, #tile-27, #tile-29
+  background-image: url(../img/arrow-blue-left.svg)
+  background-size: cover
+
+/* TILE BLUE ARROW RIGHT
+
+#tile-3, #tile-13, #tile-23
+  background-image: url(../img/arrow-blue-right.svg)
+  background-size: cover
+
+/* TILE TRAPS BACKGROUND IMAGES
+
+#tile-8
+  background-image: url(../img/wolf.svg)
+  background-size: cover
+
+#tile-11, #tile-15
+  background-image: url(../img/bowman.svg)
+  background-size: cover
+
+#tile-18
+  background-image: url(../img/mounted-knight.svg)
+  background-size: cover
+
+#tile-21
+  background-image: url(../img/night-king.svg)
+  background-size: cover
+
+#tile-25
+  background-image: url(../img/kraken.svg)
+  background-size: cover
+
+#tile-28
+  background-image: url(../img/dragon.svg)
+  background-size: cover
+
+#tile-30
+  background-image: url(../img/board-throne.svg)
+  background-size: cover
+
+.board-info
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly 
+    align-items: center
+    background-color: $indigo
+    color: $timberwolf
+    border: solid 1px $black
+
+.board-trap
+    display: flex
+    justify-content: center 
+    align-items: center
+    background-color: $timberwolf
+    border: solid 1px $black
+    height: 120px
+
+.trap-text
+    font-size: 18px
+    
+#dice-result
+    color: $dark-green
+
+#trap-activate
+    color: $ruby
+
+#p1TokenDisplay 
+    width: 100px
+
+#p2TokenDisplay 
+    width: 100px
+
+.dice-container 
+    background-color: $timberwolf
+    padding: 15px
+    
+.dice
+  width: 100px
+
+  &:hover
+    cursor: pointer
+    box-shadow: 0 5px 25px $ruby
+
+.animation-target
+  animation: animation 1000ms linear both
+
+/* Generated with Bounce.js. Edit at http://bouncejs.com#%7Bs%3A%5B%7BT%3A%22r%22%2Ce%3A%22b%22%2Cd%3A1100%2CD%3A0%2Cf%3A0%2Ct%3A360%2Cs%3A3%2Cb%3A4%7D%2C%7BT%3A%22k%22%2Ce%3A%22s%22%2Cd%3A1000%2CD%3A0%2Cf%3A%7Bx%3A0%2Cy%3A0%7D%2Ct%3A%7Bx%3A20%2Cy%3A20%7D%2Cs%3A3%2Cb%3A4%7D%5D%7D
+
+@keyframes animation
+  0%
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  2.91%
+    transform: matrix3d(-0.696, 0.724, 0, 0, -0.84, -0.551, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  4.3%
+    transform: matrix3d(-0.986, -0.199, 0, 0, -0.02, -1.006, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  5.82%
+    transform: matrix3d(-0.406, -0.921, 0, 0, 0.804, -0.606, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  8.61%
+    transform: matrix3d(0.794, -0.617, 0, 0, 0.765, 0.652, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  11.56%
+    transform: matrix3d(0.988, 0.171, 0, 0, -0.023, 1.002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  12.91%
+    transform: matrix3d(0.927, 0.38, 0, 0, -0.265, 0.966, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  17.2%
+    transform: matrix3d(0.82, 0.573, 0, 0, -0.533, 0.846, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  17.22%
+    transform: matrix3d(0.82, 0.573, 0, 0, -0.533, 0.846, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  22.93%
+    transform: matrix3d(0.928, 0.373, 0, 0, -0.374, 0.927, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  28.33%
+    transform: matrix3d(0.992, 0.124, 0, 0, -0.135, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  28.57%
+    transform: matrix3d(0.993, 0.115, 0, 0, -0.126, 0.992, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  39.44%
+    transform: matrix3d(0.999, -0.04, 0, 0, 0.038, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  51.32%
+    transform: matrix3d(1, -0.007, 0, 0, 0.007, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  61.66%
+    transform: matrix3d(1, 0.003, 0, 0, -0.003, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  74.07%
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  83.98%
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  90.91%
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+  100%
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)

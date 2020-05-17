@@ -168,7 +168,8 @@ let populateCharacters = charArr.map(character => {
 
 // Start Game button appears after both characters are chosen
 startGame.addEventListener("click", function () {
-    window.location.href = 'boardgame.html';
+    window.location.replace('boardgame.html');
+
 });
 
 // Reset button that deselects and remove the characters from the session storage
@@ -177,7 +178,6 @@ resetChar.addEventListener("click", function () {
     sessionStorage.clear();
     startGame.style.display = 'none';
     resetChar.style.display = 'none';
-    document.getElementById('playerName1').textContent = ' ';
-    document.getElementById('playerName2').textContent = ' ';
-
+    document.getElementById('playerName1').textContent = 'Player 1';
+    document.getElementById('playerName2').textContent = 'Player 2';
 });

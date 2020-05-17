@@ -1,0 +1,159 @@
+.winner-container
+ position: relative
+ display: flex
+ justify-content: center
+
+.winner-text 
+ position: absolute
+ z-index: 1
+ top: 600px
+
+#winner-img
+  position: absolute
+  width: 150px
+  top: 250px
+
+#throne-img
+  position: absolute
+  width: 450px
+
+.winner-button 
+ position: absolute
+ top: 725px
+
+.animation-target-2
+  animation: animation-2 2000ms linear both
+
+/* Generated with Bounce.js. Edit at http://bouncejs.com#%7Bs%3A%5B%7BT%3A%22t%22%2Ce%3A%22b%22%2Cd%3A1000%2CD%3A0%2Cf%3A%7Bx%3A0%2Cy%3A-3000%7D%2Ct%3A%7Bx%3A0%2Cy%3A0%7D%2Cs%3A5%2Cb%3A4%7D%2C%7BT%3A%22c%22%2Ce%3A%22s%22%2Cd%3A500%2CD%3A0%2Cf%3A%7Bx%3A1%2Cy%3A1%7D%2Ct%3A%7Bx%3A15%2Cy%3A1%7D%2Cs%3A5%2Cb%3A4%7D%5D%7D
+
+@keyframes animation-2
+  0%
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -3000, 0, 1)
+
+  1.3%
+    transform: matrix3d(3.905, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -2370.203, 0, 1)
+
+  2.55%
+    transform: matrix3d(4.554, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1827.977, 0, 1)
+
+  4.1%
+    transform: matrix3d(4.025, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1259.123, 0, 1)
+
+  5.71%
+    transform: matrix3d(3.039, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -795.962, 0, 1)
+
+  8.11%
+    transform: matrix3d(1.82, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -316.472, 0, 1)
+
+  8.81%
+    transform: matrix3d(1.581, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -218.397, 0, 1)
+
+  11.96%
+    transform: matrix3d(1.034, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 48.253, 0, 1)
+
+  12.11%
+    transform: matrix3d(1.023, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 55.303, 0, 1)
+
+  15.07%
+    transform: matrix3d(0.947, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 126.616, 0, 1)
+
+  16.12%
+    transform: matrix3d(0.951, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 130.068, 0, 1)
+
+  27.23%
+    transform: matrix3d(1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 23.516, 0, 1)
+
+  27.58%
+    transform: matrix3d(1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 21.206, 0, 1)
+
+  38.34%
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -3.11, 0, 1)
+
+  40.09%
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -2.911, 0, 1)
+
+  50%
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.477, 0, 1)
+
+  60.56%
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.074, 0, 1)
+
+  82.78%
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.002, 0, 1)
+
+  100%
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+/* Snowflakes effects from https://pajasevi.github.io/CSSnowflakes/ */
+.snowflake
+  color: $white
+  font-size: 1em
+  font-family: Arial, sans-serif
+  text-shadow: 0 0 1px $black
+  position: fixed
+  top: -10%
+  z-index: 9999
+  user-select: none
+  cursor: default
+  animation-name: snowflakes-fall,snowflakes-shake
+  animation-duration: 10s,3s
+  animation-timing-function: linear,ease-in-out
+  animation-iteration-count: infinite,infinite
+  animation-play-state: running,running
+
+  &:nth-of-type(0)
+    left: 1%
+    animation-delay: 0s,0s
+
+  &:nth-of-type(1)
+    left: 10%
+    animation-delay: 1s,1s
+
+  &:nth-of-type(2)
+    left: 20%
+    animation-delay: 6s,.5s
+
+  &:nth-of-type(3)
+    left: 30%
+    animation-delay: 4s,2s
+
+  &:nth-of-type(4)
+    left: 40%
+    animation-delay: 2s,2s
+
+  &:nth-of-type(5)
+    left: 50%
+    animation-delay: 8s,3s
+
+  &:nth-of-type(6)
+    left: 60%
+    animation-delay: 6s,2s
+
+  &:nth-of-type(7)
+    left: 70%
+    animation-delay: 2.5s,1s
+
+  &:nth-of-type(8)
+    left: 80%
+    animation-delay: 1s,0s
+
+  &:nth-of-type(9)
+    left: 90%
+    animation-delay: 3s,1.5s
+
+@keyframes snowflakes-fall
+  0%
+    top: -10%
+
+  100%
+    top: 100%
+
+@keyframes snowflakes-shake
+  0%
+    transform: translateX(0px)
+
+  50%
+    transform: translateX(80px)
+
+  100%
+    transform: translateX(0px)

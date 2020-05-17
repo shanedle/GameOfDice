@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS -->
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Title-->
+    <title>Game of Dice - Winner</title>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-custom d-flex justify-content-center">
+        <a class="navbar-brand" href="index.html">
+            <img src="./img/logo.svg" width="400" alt="Game of Dice logo">
+        </a>
+    </nav>
+    <!-- Container -->
+    <section class="container">
+        <div class="row">
+            <div class="col">
+                <!-- Snowflake Container -->
+                <div id="snowflakes-container" aria-hidden="true">
+                </div>
+                <!-- Winner Container -->
+                <div class="winner-container">
+                    <!-- Winner Text -->
+                    <div class="winner-text">
+                        <h1 class="text-white" id="winner-name"></h1>
+                        <h1 class="text-white text-center"> IS THE VICTOR</h1>
+                    </div>
+                    <!-- Throne Image -->
+                    <img id="throne-img" src="./img/throne.svg" alt="Image of a throne">
+                    <!-- Winner Image -->
+                    <img id="winner-img" class="animation-target-2" src="" alt="Winner Token">
+                    <!-- Buttons -->
+                    <div class="winner-button">
+                        <button class="btn btn-primary" id="newGame">PLAY AGAIN?</button>
+                        <button class="btn btn-primary" id="newCharacter">SELECT NEW CHARACTERS</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Loader from loading.io -->
+    <div class="loader">
+        <img src="./img/loading.gif" alt="Loading..." />
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./js/script.js"></script>
+    <script src="./js/finale.js"></script>
+
+</body>
+
+</html>

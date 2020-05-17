@@ -10,6 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <!-- Title-->
     <title>Game of Dice - Board Game</title>
 </head>
@@ -22,28 +23,65 @@
         </a>
     </nav>
 
+    <!-- Container -->
     <section class="container">
+        <div class="row mt-3">
+            <div class="col">
+                <div id="board" style="margin-left: -15px;">
+                </div>
+            </div>
+
+            <div class="col board-info">
+                <!-- Player 1 Container -->
+                <div class="player1-container">
+                    <h4 class="h4">Player 1</h4>
+
+                    <img src="" alt="Player 1 Token" id="p1TokenDisplay" class="my-2">
+
+                    <p class="playerName1 text-center"></p>
+
+                    <div class="p1Token">
+                        <img id="playerToken1" src="" style="position: absolute; margin-top: -10px; width: 70px;">
+                    </div>
+                </div>
+
+                <!-- Dice Container -->
+                <div class="dice-container">
+                    <img src="./img/dice-1.png" alt="Dice" class="dice" id="dice-roll">
+                </div>
+
+                <!-- Player 2 Container -->
+                <div class="player2-container">
+                    <h4 class="h4">Player 2</h4>
+
+                    <img src="" alt="Player 2 Token" id="p2TokenDisplay" class="my-2">
+
+                    <p class="playerName2 text-center"></p>
+
+                    <div class="p2Token">
+                        <img id="playerToken2" src=""
+                            style="position: absolute; margin-top: -10px; margin-left: 77px; width: 70px;">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
 
         <div class="row">
-            <div class="col">
-                <h4 class="h4">Player 1</h2>
-                    <span class="playerName1"></span>
+            <!-- Dice Result/Trap Column -->
+            <div class="col board-trap mt-3">
+                <div class="trap-text">
+                    <p id="dice-result"> </p>
+                    <p id="trap-activate"> </p>
+                </div>
             </div>
+        </div>
 
-            <div class="col">
-                <h4 class="h4">Player 2</h2>
-                    <span class="playerName2"></span>
-            </div>
-
-            <div class="col">
-                <img src="./img/dice-1.png" alt="Dice" class="dice">
-
-                <button class="btn btn-outline-dark" id="rollDice">Roll Dice</button>
-            </div>
     </section>
 
     <!-- Loader from loading.io -->
-
     <div class="loader">
         <img src="./img/loading.gif" alt="Loading..." />
     </div>
